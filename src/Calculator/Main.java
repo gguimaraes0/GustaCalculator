@@ -17,8 +17,13 @@ public class Main {
 			System.out.println("A soma dos valores digitados deu " + fim);
 		} while (result != 0);
 		
-		System.out.println("CLOSED");
-		System.out.flush();
+		clearScreen();
 	}
+	
+	
+	public static void clearScreen() {  
+	    System.out.print("\033[H\033[2J");  
+	    System.out.flush();  
+	}  
 }
 
