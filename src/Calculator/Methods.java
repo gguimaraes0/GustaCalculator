@@ -7,7 +7,54 @@ public class Methods {
 
 	public Scanner teclado = new Scanner(System.in);
 
-	public int Menu() {
+	public int ValidaMenu() {
+
+		int result;
+		try {
+			teclado = new Scanner(System.in);
+			result = teclado.nextInt();
+		} catch (Exception ex) {
+			result = 7;
+		}
+
+		if (result == 7) {
+			System.out.println("Digite um número válido");
+			return 7;
+		}
+		switch (result) {
+
+		case 1: {
+			return result;
+		}
+		case 2: {
+			return result;
+		}
+		case 3: {
+			return result;
+		}
+		case 4: {
+			return result;
+		}
+		case 5: {
+			return result;
+		}
+		case 6: {
+			return result;
+		}
+		case 0: {
+			return result;
+		}
+		case 7: {
+			System.out.println("Digite um número válido");
+			return 7;
+		}
+		default: {
+			return 7;
+		}
+		}
+	}
+
+	public void Menu() {
 		System.out.println("Calculadora\n");
 		System.out.println("1- Soma");
 		System.out.println("2- Substração");
@@ -16,9 +63,16 @@ public class Methods {
 		System.out.println("5- Potência");
 		System.out.println("6- Raiz Quadrada");
 		System.out.println("0- Sair\n");
+	}
 
-		int result = teclado.nextInt();
-		return result;
+	public static Integer TryParseInt(String someText) {
+		try {
+			return Integer.parseInt(someText);
+		}
+
+		catch (NumberFormatException ex) {
+			return null;
+		}
 	}
 
 	public double Operacao(int operacao) {
@@ -96,6 +150,7 @@ public class Methods {
 					double valor = DigiteValor();
 					listValores.add(valor);
 				}
+				System.out.println();
 				double resposta = 0;
 				resposta = Math.pow(listValores.get(0), listValores.get(1));
 				return resposta;

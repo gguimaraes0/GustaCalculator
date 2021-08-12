@@ -8,19 +8,20 @@ public class Main {
 		int result;
 		do {
 
-			result = methods.Menu();		
-			
+			methods.Menu();
+			result = methods.ValidaMenu();
+
 			if (result == 0)
 				break;
+			if (result == 7) {
+				continue;
+			}
 			double fim = methods.Operacao(result);
 
 			System.out.println("A soma dos valores digitados deu " + fim);
 		} while (result != 0);
-		
+
 		System.out.println("Aplicação Finalizada");
 	}
-	
-	
 
 }
-
