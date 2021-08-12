@@ -25,7 +25,8 @@ public class Methods {
 
 		try {
 
-			if (operacao == 1) {
+			switch (operacao) {
+			case 1: {
 				List<Double> listValores = new ArrayList<Double>();
 				System.out.println("Você escolheu a opção Soma\n");
 				int qntValores = QuantidadeDeValores();
@@ -41,7 +42,8 @@ public class Methods {
 				}
 
 				return resposta;
-			} else if (operacao == 2) {
+			}
+			case 2: {
 				List<Double> listValores = new ArrayList<Double>();
 				System.out.println("Você escolheu a opção Subtração\n");
 				int qntValores = QuantidadeDeValores();
@@ -57,7 +59,8 @@ public class Methods {
 				}
 
 				return aux;
-			} else if (operacao == 3) {
+			}
+			case 3: {
 				List<Double> listValores = new ArrayList<Double>();
 				System.out.println("Você escolheu a opção Divisão\n");
 				int qntValores = 2;
@@ -70,7 +73,8 @@ public class Methods {
 				resposta = (listValores.get(0) / listValores.get(1));
 
 				return resposta;
-			} else if (operacao == 4) {
+			}
+			case 4: {
 				List<Double> listValores = new ArrayList<Double>();
 				System.out.println("Você escolheu a opção Multiplicação\n");
 				int qntValores = QuantidadeDeValores();
@@ -82,7 +86,8 @@ public class Methods {
 				double resposta = 0;
 				resposta = (listValores.get(0) * listValores.get(1));
 				return resposta;
-			} else if (operacao == 5) {
+			}
+			case 5: {
 				List<Double> listValores = new ArrayList<Double>();
 				System.out.println("Você escolheu a opção Potência\n");
 				int qntValores = 2;
@@ -94,12 +99,15 @@ public class Methods {
 				double resposta = 0;
 				resposta = Math.pow(listValores.get(0), listValores.get(1));
 				return resposta;
-			} else if (operacao == 6) {
+			}
+			case 6: {
 				System.out.println("Você escolheu a opção Raiz Quadrada\n");
 				double valor = DigiteValor();
 				return java.lang.Math.sqrt(valor);
-			} else if (operacao == 0) {
+			}
+			case 0: {
 				return 0;
+			}
 			}
 			return 0;
 		} catch (Exception e) {
